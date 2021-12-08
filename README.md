@@ -16,10 +16,9 @@ Useful for automation and user accessibility, this is a working .NET WebApp demo
 * Ensure the PowerShell Execution Policy has been sufficiently opened to allow your scripts to run. If in doubt and at own risk, as Administrator run:
 ```powershell
     Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-    Set-ExecutionPolicy Unrestricted -Scope LocalMachine
     Set-ExecutionPolicy Unrestricted -Scope Process
 ```
-Note: for Visual Studio users, open Visual Studio as Administrator, open Package Manager Console, and execute the above commands.
+Note: for Visual Studio users, execute the above in the Package Manager Console.
     
 * Place your PowerShell scripts in **~/Scripts/**. .NET requires the path to be relative to the project, hence this location. You'll find a cute test.ps1 file in there.
 
