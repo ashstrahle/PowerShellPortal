@@ -1,0 +1,14 @@
+﻿@page
+@{
+    Layout = "~/Views/Shared/_Results_Layout.cshtml";
+    ViewBag.Title = "Results";
+}
+<h2>@ViewBag.Title</h2>
+<hr />
+
+<div class="container">
+    <ul id="results"></ul>
+</div>
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/outputHub.js"></script>
