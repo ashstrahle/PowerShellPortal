@@ -1,30 +1,9 @@
 # PowerShell Portal
-Execute PowerShell scripts via .Net WebApp. Real-time output
+Execute PowerShell scripts via .Net WebApp with real-time output
 
-Useful for automation and user accessibility, this is a working .NET WebApp demonstration of how to asynchronously (in real-time) execute PowerShell scripts, capturing and writing the Output, Progress, Warning, and Error streams to an HTML results window.
+Useful for automation and user accessibility, this is a working .NET WebApp that asynchronously executes PowerShell scripts, and writes the Output, Progress, Warning, and Error streams to a results window in real-time.
 
-![Results](Images/Results.gif)
-
-## Prerequisites
-
-* Windows authentication enabled, and anonymous authenticated disabled. This is because SignalR is used to provide live feedback of the running script - as such, a SignalR group is created using the username associated with each session. If set correctly, you should see your username in the top right of the initial form.
-
-* PowerShell scripts must be non-interactive; there's no means to provide input back to powershell scripts once they're running.
-
-* Output must be written using Write-Output, Write-Progress, Write-Warning, or Write-Error only. Output written with Write-Host cannot be captured and hence won't display in the results window.
-
-* Ensure the PowerShell Execution Policy has been sufficiently opened to allow your scripts to run. If in doubt and at own risk, as Administrator run:
-```powershell
-    Set-ExecutionPolicy Unrestricted -Scope CurrentUser
-    Set-ExecutionPolicy Unrestricted -Scope Process
-```
-Note: for Visual Studio users, execute the above in the Package Manager Console.
-    
-* Place your PowerShell scripts in **~/Scripts/**. .NET requires the path to be relative to the project, hence this location. You'll find a cute test.ps1 file in there.
-
-## Running test.ps1
-
-**test.ps1** included in this project, contains the following code:
+**test.ps1** (included in this project):
 ```powershell
 for ($i=1; $i -le 5; $i++) {
     Write-Progress "Loop $i - progress output (Write-Progress)"
@@ -34,8 +13,27 @@ for ($i=1; $i -le 5; $i++) {
     Start-Sleep -s 1
 }
 ```
+Looks like this...
 
-As shown above, it provides output to each of the PowerShell streams over 5 iterations, with a start-sleep 1s after each iteration.
+![Results](Images/Results.gif)
+
+## Prerequisites
+
+* Windows authentication enabled, and anonymous authenticated disabled. This is because SignalR is used to provide live feedback of the running script - as such, a SignalR group is created using the username associated with each session. If set correctly, you should see your username in the top right of the initial form.
+
+* PowerShell scripts must be non-interactive; there's no means to provide input back to PowerShell scripts once they're running.
+
+* Output must be written using Write-Output, Write-Progress, Write-Warning, or Write-Error only. Output written with Write-Host cannot be captured and hence won't display in the results window.
+
+* Ensure the PowerShell Execution Policy has been sufficiently opened to allow your scripts to run. If in doubt and at own risk, as Administrator run:
+```powershell
+    Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+    Set-ExecutionPolicy Unrestricted -Scope Process
+```
+Note: for Visual Studio users, execute the above in Package Manager Console.
+    
+* Place your PowerShell scripts in **~/Scripts/**. .NET requires the path to be relative to the project, hence this location.
+
 ## Author
 
 * **Ashley Strahle** - [AshStrahle](https://github.com/AshStrahle)
