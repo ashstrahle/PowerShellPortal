@@ -16,9 +16,9 @@ namespace PowerShellPortal.Controllers
 
         public void RunScript(PowerShell shell, bool varwidth)
         {
-            // Sleep a few secs to allow enough time for Results window to open and establish connection to OutputHub
-            // Without this, output may not show
-            System.Threading.Thread.Sleep(3000);
+            // Sleep momentarily a to allow enough time for Results window to open and establish connection to OutputHub
+            // Without this, not all output may show
+            System.Threading.Thread.Sleep(1000);
 
             string hubGroup = Environment.UserName;
 
