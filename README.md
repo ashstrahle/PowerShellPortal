@@ -22,7 +22,7 @@ Note: for Visual Studio users, execute the above in the Package Manager Console.
     
 * Place your PowerShell scripts in **~/Scripts/**. .NET requires the path to be relative to the project, hence this location. You'll find a cute test.ps1 file in there.
 
-## Running test.ps1 file
+## Running test.ps1
 
 **test.ps1** included in this project, contains the following code:
 ```powershell
