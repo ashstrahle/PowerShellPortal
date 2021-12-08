@@ -3,7 +3,7 @@ Execute PowerShell scripts via .Net WebApp. Real-time output
 
 Useful for automation and user accessibility, this is a working .NET WebApp demonstration of how to asynchronously (in real-time) execute PowerShell scripts, capturing and writing the Output, Progress, Warning, and Error streams to an HTML results window.
 
-![Results1](https://github.com/ashstrahle/RealtimePowerShellHTMLWindow/blob/master/Images/Results1.png)
+![Results](https://github.com/ashstrahle/RealtimePowerShellHTMLWindow/blob/master/Images/Results.gif)
 
 ## Prerequisites
 
@@ -35,15 +35,7 @@ for ($i=1; $i -le 5; $i++) {
 }
 ```
 
-It provides output to each of the PowerShell streams over 5 iterations, with a start-sleep 1s after each iteration, and produces the following:
-
-![Image 1](https://github.com/ashstrahle/RealtimePowerShellHTMLWindow/blob/master/Images/Run%20PowerShell%20Script.png)
-
-![Results1](https://github.com/ashstrahle/RealtimePowerShellHTMLWindow/blob/master/Images/Results1.png)
-
-![Results2](https://github.com/ashstrahle/RealtimePowerShellHTMLWindow/blob/master/Images/Results2.png)
-
-
+As shown above, it provides output to each of the PowerShell streams over 5 iterations, with a start-sleep 1s after each iteration.
 ## Author
 
 * **Ashley Strahle** - [AshStrahle](https://github.com/AshStrahle)
