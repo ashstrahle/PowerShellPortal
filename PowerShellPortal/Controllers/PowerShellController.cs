@@ -16,7 +16,7 @@ namespace PowerShellPortal.Controllers
 
         public void RunScript(PowerShell shell, bool varwidth)
         {
-            // Sleep momentarily a to allow enough time for Results window to open and establish connection to OutputHub
+            // Sleep momentarily to allow enough time for Results window to open and establish connection to OutputHub
             // Without this, not all output may show
             System.Threading.Thread.Sleep(1000);
 
