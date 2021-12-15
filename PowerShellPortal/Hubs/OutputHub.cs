@@ -6,11 +6,7 @@ namespace PowerShellPortal.Controllers
     {
         public async Task Send(string message, string connID)
         {
-            // Call the addNewMessageToPage method to update clients.
-            // Clients.All.addNewMessageToPage(message);
-            // Clients.Caller.addNewMessageToPage(message);
             await Clients.Client(connID).SendAsync("show", message);
-            //await Clients.All.SendAsync("ReceiveMessage", message);
         }
 
         public async override Task<Task> OnConnectedAsync()
