@@ -47,11 +47,6 @@ namespace PowerShellPortal.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
         public ActionResult Results()
         {
             return View();
