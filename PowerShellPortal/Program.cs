@@ -10,11 +10,6 @@ builder.Services.AddSignalR();
 builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
    .AddNegotiate();
 
-builder.Services.AddAuthorization(options =>
-{
-    // By default, all incoming requests will be authorized according to the default policy.
-    options.FallbackPolicy = options.DefaultPolicy;
-});
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
