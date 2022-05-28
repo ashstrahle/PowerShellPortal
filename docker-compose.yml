@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  powershellportal:
+    image: ${DOCKER_REGISTRY-}powershellportal
+    build:
+      context: .
+      dockerfile: PowerShellPortal/Dockerfile
