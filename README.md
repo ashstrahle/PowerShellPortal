@@ -1,4 +1,7 @@
 # PowerShell Portal
+
+## This project has been superceded. Please visit https://github.com/ashstrahle/PowerShellBlazor
+
 Execute PowerShell scripts via .Net WebApp with real-time output
 
 Useful for automation and user accessibility, this is a working .NET WebApp that asynchronously executes PowerShell scripts, and writes the Output, Progress, Warning, and Error streams to a results window in real-time.
