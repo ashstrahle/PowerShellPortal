@@ -1,6 +1,6 @@
 # PowerShell Portal
 
-## This project has been superceded. Please visit [PowerShell Blazor](https://github.com/ashstrahle/PowerShellBlazor)
+## This project has been superceded. Please visit [PowerShell Blazor Portal](https://github.com/ashstrahle/PowerShellBlazor)
 
 Execute PowerShell scripts via .Net WebApp with real-time output
 
